@@ -14,22 +14,15 @@ source:
     - {{ cran_mirror }}/src/contrib/Archive/rgexf/rgexf_{{ version }}.tar.gz
   sha256: 2e8a7978d1fb977318e6310ba65b70a9c8890185c819a7951ac23425c6dc8147
 
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
-
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
 
-
   # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
     - lib/
-
 
 requirements:
   build:
